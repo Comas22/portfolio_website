@@ -325,10 +325,10 @@
 
             <div class="footer-content-centered reveal delay-100">
                 <div class="contact-cards">
-                    <a href="mailto:carles.comas@outlook.com" class="contact-card">
+                    <button id="openEmailModalBtn" class="contact-card contact-card-btn">
                         <i class="fas fa-envelope"></i>
                         <span>carles.comas@outlook.com</span>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="social-links-large">
@@ -351,6 +351,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Email Contact Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title">Get in Touch</h3>
+            <p class="modal-desc">Choose how you'd like to contact me:</p>
+            <div class="modal-options">
+                <a href="mailto:carles.comas@outlook.com" class="modal-btn"><i class="fas fa-envelope"></i> Default Mail App</a>
+                <a href="https://outlook.live.com/mail/0/deeplink/compose?to=carles.comas@outlook.com" target="_blank" class="modal-btn"><i class="fab fa-microsoft"></i> Outlook Web</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=carles.comas@outlook.com" target="_blank" class="modal-btn"><i class="fab fa-google"></i> Gmail Web</a>
+                <button id="copyEmailBtn" class="modal-btn"><i class="fas fa-copy"></i> Copy Email Address</button>
+            </div>
+            <div id="copyFeedback" class="copy-feedback">Email copied to clipboard!</div>
+        </div>
+    </div>
 
     <!-- Mobile Menu Script -->
     <script>

@@ -24,23 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModalBtn = document.querySelector('.close-modal');
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     const copyFeedback = document.getElementById('copyFeedback');
-    
+
     if (openModalBtn && emailModal) {
         openModalBtn.addEventListener('click', (e) => {
             e.preventDefault();
             emailModal.classList.add('show');
         });
-        
+
         closeModalBtn.addEventListener('click', () => {
             emailModal.classList.remove('show');
         });
-        
+
         window.addEventListener('click', (e) => {
             if (e.target === emailModal) {
                 emailModal.classList.remove('show');
             }
         });
-        
+
         copyEmailBtn.addEventListener('click', async () => {
             try {
                 await navigator.clipboard.writeText('carles.comas@outlook.com');
